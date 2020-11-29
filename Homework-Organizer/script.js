@@ -24,6 +24,10 @@ if (dd != "" && ac != ""){
 else {
   hoverText = dd + ac
 }
+
+if (al.includes("://") == true || al.length == 0) {
+
+
 var table = document.getElementById("table");
 var rows = table.rows.length;
 var row = table.insertRow(rows);
@@ -60,3 +64,7 @@ $("table tr").not("thead tr").unbind().dblclick(function(){
     }
 });
 }
+}
+//else if (al.includes("://") == false || al.length > 0) {
+//  alert("URL must contain \"https://\"")
+//}
