@@ -16,5 +16,10 @@ def courses():
 def assignments():
     return render_template('assignments.html')
 
+@app.route("/connect", methods=["GET", "POST"])
+def connect():
+    if request.method == "POST":
+        pass
+    return render_template('connect.html')
 if __name__ == '__main__':
     app.run(debug=True)
