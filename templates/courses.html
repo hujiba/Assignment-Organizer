@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="main.css") }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="/assignments">Assignments</a>
+  <a href="/courses">Courses</a>
+</div>
+<div style="padding-left:16px;">
+<h1>Courses</h1>
+<div class="main">
+  <ul class="cards">
+{% block content %}
+  {% for course in courses_list %}
+
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_content">
+          <h2 class="card_title"> {{course.name}} </h2>
+          <p class="card_text"> {{course.descriptionHeading}} </p>
+          <button class="btn card_btn" onclick=" window.open('{{ course.alternateLink }}')"> Open </button>
+        </div>
+      </div>
+    </li>
+
+{% endfor %}
+{% endblock content %}
+  </ul>
+  </div>
+</body>
+</html>
