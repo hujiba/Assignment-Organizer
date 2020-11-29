@@ -65,6 +65,3 @@ $("table tr").not("thead tr").unbind().dblclick(function(){
 });
 }
 }
-//else if (al.includes("://") == false || al.length > 0) {
-//  alert("URL must contain \"https://\"")
-//}
