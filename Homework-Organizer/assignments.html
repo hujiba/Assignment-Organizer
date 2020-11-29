@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Assignments</title>
+    <link href="assignments.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="../assignments.html">Assignments</a>
+      <a href="/courses.html">Courses</a>
+      <a href="/Login-SignUp-Page/HomePage.html">Home</a>
+    </div>
+    <div class="assign">
+    <form>
+      <br>
+      <label for='AssignmentName'>Assignment Name:</label>
+      <input class="textbox" type='text' id='AssignmentName' required name='AssignmentName'><br/>
+      <label for= 'DueDate'>Due Date:</label> 
+      <input class="textbox" type='date' id= 'DueDate' value="DueDate"><br/>
+      <label for='AssignmentLink'>Assignment Link:</label>
+      <input class="textbox" type='url' id='AssignmentLink' name='AssignmentLink' placeholder="https://example.com" pattern="*://.*"><br/>
+      <label for='AssignmentClass'>Assignment Class:</label>
+      <input class="textbox" type='text' id='AssignmentClass' name='AssignmentClass'><br/>
+      <select name="dropdown" id="dropdown">
+        <option value="To Do">To Do</option>
+        <option value="Doing">Doing</option>
+        <option value="Done">Done</option>
+      </select>
+      <br>
+      <input class="button" type="button" value="Submit" id= 'submit'onclick='sub()' >
+    </form>
+    </div>
+    <br>
+    <p>Double click an entry to delete it.
+    <br>
+    Hover over an entry to view other information.
+    <br>
+    Click an entry to move it to the next column.
+    </p>
+  <div class="list"> 
+    <table id="table" style="width:100%">
+    <tr>
+      <th>To Do</th>
+      <th>Doing</th>
+      <th>Done</th> 
+    </tr>
+    </table>
+  </body>
+</html>
